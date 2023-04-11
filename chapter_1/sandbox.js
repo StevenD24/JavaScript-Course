@@ -39,3 +39,10 @@ console.log(result, fullName);
 
 let index = email.indexOf('@');
 console.log(index);
+
+// common string methods
+let results = email.lastIndexOf('e');
+console.log(results);
+
+results = email.slice(4, 10);
+console.log(results);
