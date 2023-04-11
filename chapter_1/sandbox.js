@@ -77,3 +77,21 @@ console.log(5 * 'hello');
 
 let strRes = 'the blog has ' + likes + ' likes';
 console.log(strRes);
+
+// template strings
+const title = 'Best reads of 2019';
+const author = 'Mario';
+const likes1 = 30;
+
+// template string
+const res1 = `The blog called ${title} by ${author} has ${likes1} likes`;
+console.log(res1);
+
+// creating html templates
+let html = `
+    <h2>${title}</h2>
+    <p>By ${author}</p>
+    <span>This blog has ${title} like </span>
+`;
+
+console.log(html);
