@@ -95,3 +95,32 @@ let html = `
 `;
 
 console.log(html);
+
+// arrays
+let arr = ['steven', 'ben', 'kevin'];
+console.log(arr[0]);
+
+let ages = [20, 25, 30, 35];
+console.log(ages[2]);
+
+let random = ['steven', 'crystal', 30, 20];
+console.log(random);
+
+console.log(arr.length);
+
+// array methods
+let res2 = arr.join(',');
+console.log(res2);
+
+let result2 = arr.concat(['ken', 'crystal']);
+console.log(result2);
+
+let result3 = result2.push('kenny');
+console.log(result3);
+
+let age = null;
+console.log(age, age + 3, `the age is ${age}`);
+
+console.log(true, false);
+
+
