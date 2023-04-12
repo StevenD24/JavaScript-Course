@@ -52,4 +52,59 @@ if (password.length >= 12 && password.includes('@')) {
     console.log('that password is strong enough');
 }
 
+// logical NOT (!)
+let user = false;
+
+if (!user) {
+    console.log('you must be logged in to continue');
+}
+
+// break and continue
+const scores = [50, 25, 0 , 30, 100, 20, 10];
+for (let i = 0; i < scores.length; i++) {
+    console.log('your score: ', scores[i]);
+
+    if (scores[i] === 0) {
+        continue;
+    }
+
+    if (scores[i] === 100) {
+        console.log('congrats you got the top score!');
+        break;
+    }
+
+}
+
+// switch case statements
+const grade = 'A';
+
+switch(grade) {
+    case 'A':
+        console.log('You got an A!');
+        break;
+    case 'B':
+        console.log('You got a B');
+        break;
+    case 'C':
+        console.log('You got a C');
+        break;
+    case 'D':
+        console.log('You got a D');
+        break;
+    case 'F':
+        console.log('You got an F');
+        break;
+    default:
+        console.log('not a valid grade');
+}
+
+// variables and block scope
+let age1 = 30;
+
+if (true) {
+    let age1 = 40;
+    console.log('inside 1st code block ', age1);
+}
+
+console.log('outside code block: ', age1);
 
