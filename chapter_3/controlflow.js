@@ -42,13 +42,14 @@ if (ninjas.length > 3) {
 }
 
 // if else statements
-const password = '12345678';
+const password = '123456@';
 
-if (password.length >= 12) {
+if (password.length >= 12 && password.includes('@')) {
     console.log('that password is strong');
-} else if (password.length >= 8) {
-    console.log('that password meets the lenth requirement');
+} else if (password.length >= 8 || (password.includes('@') && password.length > 5)) {
+    console.log('that password meets the requirements');
 } else {
-    console.log('that password is not long enough');
+    console.log('that password is strong enough');
 }
+
 
