@@ -13,3 +13,5 @@ greet();
 
 // invoke function expression
 speak();
+
+// JavaScript hoists function declarations, but not expressions.
