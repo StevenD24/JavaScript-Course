@@ -99,12 +99,18 @@ switch(grade) {
 }
 
 // variables and block scope
-let age1 = 30;
+let age1 = 30; // global scope
 
 if (true) {
     let age1 = 40;
-    console.log('inside 1st code block ', age1);
+    let name = 'shaun'; // local scope
+    console.log('inside 1st code block ', age1, name);
+
+    if (true) {
+        console.log('inside 2nd code block: ', age1); // nested loop still sees age1
+    }
 }
 
-console.log('outside code block: ', age1);
+// name not seen here
+console.log('outside code block: ', age1, name);
 
