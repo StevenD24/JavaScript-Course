@@ -107,7 +107,8 @@ if (true) {
     console.log('inside 1st code block ', age1, name);
 
     if (true) {
-        console.log('inside 2nd code block: ', age1); // nested loop still sees age1
+        let age1 = 50; // creating another local variable
+        console.log('inside 2nd code block: ', age1);
     }
 }
 
