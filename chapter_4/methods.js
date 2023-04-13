@@ -1,17 +1,11 @@
-// function declarations
-function greet() {
-    console.log('hello world');
-}
+const name = 'Steven';
 
-// function expression
-const speak = function() {
-    console.log('good day!');
-};
+// functions
+const greet = () => 'hello';
 
-// function call
-greet();
+let resultOne = greet();
+console.log(resultOne);
 
-// invoke function expression
-speak();
-
-// JavaScript hoists function declarations, but not expressions.
+// methods
+let resultTwo = name.toUpperCase();
+console.log(resultTwo);
