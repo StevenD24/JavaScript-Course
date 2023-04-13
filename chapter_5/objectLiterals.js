@@ -78,3 +78,20 @@ console.log(Math.trunc(area));
 const random = Math.random();
 console.log(random);
 console.log(Math.round(random * 100));
+
+// primitive values have deep copy
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+console.log(`scoreOne: ${scoreOne}, scoreTwo: ${scoreTwo}`);
+
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}, scoreTwo: ${scoreTwo}`);
+
+// reference values with shallow copy
+const userOne = { name: 'ryu', age: 24};
+const userTwo = userOne;
+
+console.log(userOne, userTwo);
+
+userOne.age = 40;
+console.log(userOne, userTwo);
