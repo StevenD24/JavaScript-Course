@@ -36,4 +36,5 @@ people.forEach(person => {
 });
 
 console.log(html);
+// places the html inside the ul
 ul.innerHTML = html;
