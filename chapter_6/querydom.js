@@ -17,4 +17,6 @@ console.log(paras[1]);
 
 // css selector to get the first p
 const para = document.querySelector('p');
+// this line completely overwrites the content
 console.log(para.innerText);
+
