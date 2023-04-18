@@ -35,6 +35,11 @@ items.forEach(item => {
     });
 });
 
+// event listener for the ul
 ul.addEventListener('click', e => {
-    console.log('event in UL');
+    // console.log('event in UL');
+    if (e.target.tagName === 'LI') {
+        e.target.remove();
+    }
+    console.log(e.target);
 });
