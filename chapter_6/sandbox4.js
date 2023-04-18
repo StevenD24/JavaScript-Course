@@ -29,7 +29,12 @@ items.forEach(item => {
         console.log(e.target);
         // puts a line through the text when the item is clicked
         e.target.style.textDecoration = 'line-through';
-        
+        console.log('event in LI');
+        // e.stopPropagation(); // stops the event bubbling up to the parent
         e.target.remove();
     });
+});
+
+ul.addEventListener('click', e => {
+    console.log('event in UL');
 });
