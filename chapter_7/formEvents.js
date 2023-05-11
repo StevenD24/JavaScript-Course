@@ -1,6 +1,7 @@
 const form = document.querySelector('.signup-form');
 const feedback = document.querySelector('.feedback');
 // const username = document.querySelector('#username');
+const usernamePattern = /^[a-z]{6,12}$/;
 
 // take the event parameter in the callback function
 form.addEventListener('submit', e => {
@@ -10,7 +11,6 @@ form.addEventListener('submit', e => {
 
     // form validation using regex
     const username = form.username.value;
-    const usernamePattern = /^[a-z]{6,12}$/;
 
     if (usernamePattern.test(username)) {
         // feedback good info
@@ -18,6 +18,20 @@ form.addEventListener('submit', e => {
     } else {
         // feedback help info
         feedback.textContent = 'username must contain letters only and must be between 6 & 12 characters long';
+    }
+});
+
+// live feedback
+form.username.addEventListener('keyup', e => {
+    console.log(e);
+    // console.log(e.target.value, form.username.value); 
+    // e.target.value is the data that the user types in
+    if (usernamePattern.test(e.target.value)) {
+        // console.log('passed');
+        form.username.setAttribute('class', 'success');
+    } else {
+        // console.log('failed');
+        form.username.setAttribute('class', 'error');
     }
 });
 
