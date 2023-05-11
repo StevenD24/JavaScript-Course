@@ -20,4 +20,8 @@ form.addEventListener('submit', e => {
     result.querySelector('span').textContent = `${score}%`;
     result.classList.remove('d-none');
 
+    setInterval(() => {
+        console.log('hello');
+    }, 1000);
+
 });
