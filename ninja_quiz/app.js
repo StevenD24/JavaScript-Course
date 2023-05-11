@@ -17,16 +17,26 @@ form.addEventListener('submit', e => {
 
     // show result on the page
     scrollTo(0,0);
-    result.querySelector('span').textContent = `${score}%`;
+    // result.querySelector('span').textContent = `${score}%`;
     result.classList.remove('d-none');
 
-    let i = 0;
+    // let i = 0;
+    // const timer = setInterval(() => {
+    //     console.log('hello');
+    //     i++;
+    //     if (i === 5) {
+    //         clearInterval(timer);
+    //     }
+    // }, 1000);
+
+    let output = 0;
     const timer = setInterval(() => {
-        console.log('hello');
-        i++;
-        if (i === 5) {
+        result.querySelector('span').textContent = `${output}%`;
+        if (output === score) {
             clearInterval(timer);
+        } else {
+            output++;
         }
-    }, 1000);
+    }, 10);
 
 });
