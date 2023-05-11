@@ -5,4 +5,5 @@ const filteredScores = scores.filter((score) => {
     return score > 20;
 });
 
+// log the filtered array to console
 console.log(filteredScores);
