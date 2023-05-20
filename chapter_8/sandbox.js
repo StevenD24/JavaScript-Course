@@ -51,3 +51,43 @@ const saleProducts = products.map((product) => {
 });
 
 console.log(saleProducts);
+
+// reduce method
+const scores1 = [10, 20, 60, 40, 70, 90, 30];
+
+// takes the accumulator and current as args
+// acc is the running total
+// current is the current element
+const result = scores1.reduce((acc, curr) => {
+    if (curr > 50) {
+        acc++;
+    }
+    return acc;
+}, 0);
+
+console.log(result);
+
+// array of objects
+const scores2 = [
+    {player: 'p1', score: 50},
+    {player: 'p2', score: 30},
+    {player: 'p1', score: 70},
+    {player: 'p3', score: 60},
+    {player: 'p1', score: 50},
+    {player: 'p2', score: 30},
+    {player: 'p1', score: 70},
+    {player: 'p3', score: 60},
+    {player: 'p1', score: 90},
+    {player: 'p2', score: 30},
+    {player: 'p1', score: 70},
+    {player: 'p3', score: 90},
+];
+
+const p3Total = scores2.reduce((acc, curr) => {
+    if (curr.player === 'p3') {
+        acc += curr.score;
+    }
+    return acc;
+}, 0);
+
+console.log(p3Total);
