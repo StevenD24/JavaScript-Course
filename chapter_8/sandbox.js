@@ -123,6 +123,22 @@ const players = [
     {name: 'kevin', score: 30}
 ]
 
-players.sort((a,b) => {
 
+// compares every 2 consecutive elements in the array
+// with the callback function
+players.sort((a,b) => {
+    if (a.score > b.score) {
+        return -1;
+    } else if (b.score > a.score) {
+        return +1;
+    } else {
+        return 0;
+    }
 });
+
+// same code but less lines
+players.sort((a, b) => {
+    return b.score - a.score;
+})
+
+console.log(players);
