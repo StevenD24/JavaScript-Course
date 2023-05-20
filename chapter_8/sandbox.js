@@ -113,3 +113,16 @@ const scores5 = [10, 50, 20, 5, 35, 70, 45];
 
 scores5.sort();
 console.log(scores5);
+
+
+// example 3 - sorting objects
+const players = [
+    {name: 'steven', score: 50},
+    {name: 'haru', score: 40},
+    {name: 'emily', score: 60},
+    {name: 'kevin', score: 30}
+]
+
+players.sort((a,b) => {
+
+});
