@@ -111,7 +111,10 @@ console.log(names);
 
 const scores5 = [10, 50, 20, 5, 35, 70, 45];
 
-scores5.sort();
+// fixes the sort method using the comparison operator
+scores5.sort((a, b) => {
+    return a - b;
+});
 console.log(scores5);
 
 
@@ -139,6 +142,23 @@ players.sort((a,b) => {
 // same code but less lines
 players.sort((a, b) => {
     return b.score - a.score;
-})
+});
 
 console.log(players);
+
+// chaining array methods
+const filtered = products.filter(product => {
+    return product.price > 20;
+});
+
+const promos = filtered.map(product => {
+    return `the ${product.name} is ${product.price/2} pounds`;
+});
+
+// chained array method
+// for each method, put it on a new line and indent
+const promos1 = products
+    .filter(product => product.price > 20)
+    .map(product => `the ${product.name} is ${product.price/2} pounds`);
+
+console.log(promos1);
