@@ -40,7 +40,7 @@ list.addEventListener('click', e => {
 const filterTodos = (term) => {
     Array.from(list.children)
         .filter((todo) => {
-            return !todo.textContent.includes(term);
+            return !todo.textContent.toLowerCase().includes(term);
             // console.log(todo.textContent);
         })
         .forEach((todo) => {
@@ -49,7 +49,7 @@ const filterTodos = (term) => {
 
     Array.from(list.children)
     .filter((todo) => {
-        return todo.textContent.includes(term);
+        return todo.textContent.toLowerCase().includes(term);
         // console.log(todo.textContent);
     })
     .forEach((todo) => {
@@ -59,6 +59,6 @@ const filterTodos = (term) => {
 
 // keyup event
 search.addEventListener('keyup', () => {
-    const term = search.value.trim();
+    const term = search.value.trim().toLowerCase();
     filterTodos(term);
 });
