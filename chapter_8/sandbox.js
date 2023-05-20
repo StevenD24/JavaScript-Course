@@ -101,3 +101,15 @@ const firstHighScore = scores4.find((score) => {
 });
 
 console.log(firstHighScore);
+
+// example 1 - sorting strings
+const names = ['steven', 'haru', 'emily', 'bugcat'];
+
+// example 2 - sorting numbers
+names.sort();
+console.log(names);
+
+const scores5 = [10, 50, 20, 5, 35, 70, 45];
+
+scores5.sort();
+console.log(scores5);
