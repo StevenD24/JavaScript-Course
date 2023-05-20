@@ -91,3 +91,13 @@ const p3Total = scores2.reduce((acc, curr) => {
 }, 0);
 
 console.log(p3Total);
+
+// find method
+const scores4 = [10, 5, 0, 40, 30, 10, 90, 70];
+
+// stops when it first finds a value that passes this condition
+const firstHighScore = scores4.find((score) => {
+    return score > 50;
+});
+
+console.log(firstHighScore);
