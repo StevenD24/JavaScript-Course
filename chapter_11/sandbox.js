@@ -22,3 +22,23 @@ console.log(now.toDateString());
 console.log(now.toTimeString());
 console.log(now.toLocaleString());
 
+const before = new Date('May 20 2023 16:55:40');
+const present = new Date();
+
+console.log(present.getTime(), before.getTime());
+const diff = present.getTime() - before.getTime();
+console.log(diff);
+
+const mins = Math.round(diff / 1000 / 60);
+const hours = Math.round(mins / 60);
+const days = Math.round(hours / 24);
+
+console.log(mins, hours, days);
+
+// measure time
+console.log(`the blog was written ${days} ago.`);
+
+// converting timestamps into date object
+const timestamp = 1675938474990;
+console.log(new Date(timestamp));
+
