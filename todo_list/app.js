@@ -2,6 +2,8 @@
 const addForm = document.querySelector('.add');
 // get reference to the ul
 const list = document.querySelector('.todos');
+// get reference to the search form
+const search = document.querySelector('.search input');
 
 // generate template for li todo
 const generateTemplate = (todo) => {
@@ -32,4 +34,31 @@ list.addEventListener('click', e => {
     if (e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
     }
+});
+
+// filter todos
+const filterTodos = (term) => {
+    Array.from(list.children)
+        .filter((todo) => {
+            return !todo.textContent.includes(term);
+            // console.log(todo.textContent);
+        })
+        .forEach((todo) => {
+            todo.classList.add('filtered');
+        });
+
+    Array.from(list.children)
+    .filter((todo) => {
+        return todo.textContent.includes(term);
+        // console.log(todo.textContent);
+    })
+    .forEach((todo) => {
+        todo.classList.remove('filtered');
+    });
+};
+
+// keyup event
+search.addEventListener('keyup', () => {
+    const term = search.value.trim();
+    filterTodos(term);
 });
