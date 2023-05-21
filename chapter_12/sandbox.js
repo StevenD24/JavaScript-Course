@@ -8,3 +8,6 @@ setTimeout(() => {
 
 console.log(3);
 console.log(4);
+
+// HTTP requests to get data from another server
+// we make thse requests to API endpoints
