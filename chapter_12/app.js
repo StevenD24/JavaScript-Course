@@ -1,20 +1,30 @@
-// HTTP requests to get data from another server
-// we make thse requests to API endpoints
+const getTodos = (callback) => {
+    const request = new XMLHttpRequest();
 
-// creates a request object
-// this will be used to send a request to the browser
-// send a request to get some data
-const request = new XMLHttpRequest();
+    request.addEventListener('readystatechange', () => {
+        if (request.readyState === 4 && request.status === 200) {
+            callback(undefined, request.responseText);
+        } else if (request.readyState === 4) {
+            callback('could not fetch data', undefined);
+        }
+    });
 
-request.addEventListener('readystatechange', () => {
-    // console.log(request, request.readyState);
-    // readyState = 4 means that the request was completed
-    if (request.readyState === 4) {
-        console.log(request.responseText);
+    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
+    request.send();
+};
+
+console.log(1);
+console.log(2);
+
+// async request is not blocking the code below.
+getTodos((err, data) => {
+    console.log('callback fired');
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(data);
     }
 });
 
-// type of request and where to get the data from
-request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
-// sends the request
-request.send();
+console.log(3);
+console.log(4);
