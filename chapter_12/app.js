@@ -11,7 +11,7 @@ const getTodos = (resource) => {
             reject('error getting resource');
         }
     });
-    
+
         request.open('GET', resource);
         request.send();
     });
@@ -19,6 +19,12 @@ const getTodos = (resource) => {
 
 getTodos('todos/steven.json').then(data => {
     console.log('promise resolved: ', data);
+    return getTodos('todos/kevin.json');
+}).then(data => {
+    console.log('promise 2 resolved: ', data);
+    return getTodos('todos/lin.json');
+}).then(data => {
+    console.log('promise 3 resolved: ', data);
 }).catch(err => {
     console.log('promise rejected: ', err);
 });
