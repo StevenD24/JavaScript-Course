@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 
 const updateUI = (data) => {
+    
 
     const cityDetails = data.cityDetails;
     const weather = data.weather;
@@ -23,6 +24,11 @@ const updateUI = (data) => {
         </div>
     </div>
 `;
+
+    // remove the d-none class if present
+    if (card.classList.contains('d-none')) {
+        card.classList.remove('d-none');
+    }
 
 };
 
