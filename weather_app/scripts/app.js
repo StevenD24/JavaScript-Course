@@ -2,7 +2,17 @@ const cityForm = document.querySelector('form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 
+const updateUI = (data) => {
+
+    const cityDetails = data.cityDetails;
+    const weather = data.weather;
+
+    // update the details template
+    
+};
+
 const updateCity = async (city) => {
+
     const cityDetails = await getCity(city);
     const weather = await getWeather(cityDetails.Key);
 
@@ -11,6 +21,7 @@ const updateCity = async (city) => {
 };
 
 cityForm.addEventListener('submit', e => {
+
     // prevent default action
     e.preventDefault();
 
@@ -21,6 +32,6 @@ cityForm.addEventListener('submit', e => {
 
     // update the ui with new city
     updateCity(city)
-        .then(data => console.log(data))
+        .then(data => updateUI(data))
         .catch(err => console.log(err));
 });
