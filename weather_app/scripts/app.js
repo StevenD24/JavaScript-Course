@@ -8,7 +8,22 @@ const updateUI = (data) => {
     const weather = data.weather;
 
     // update the details template
-    
+    details.innerHTML = `
+    <h5 class="my-3">${cityDetails.EnglishName}</h5>
+    <div class="my-3">${weather[0].WeatherText}</div>
+    <div class="display-4 my-4">
+        <div>
+            <span>${weather[0].Temperature.Metric.Value}</span>
+            <span>&deg;C</span>
+        </div>
+        <hr>
+        <div>
+            <span>${weather[0].Temperature.Imperial.Value}</span>
+            <span>&deg;F</span>
+        </div>
+    </div>
+`;
+
 };
 
 const updateCity = async (city) => {
