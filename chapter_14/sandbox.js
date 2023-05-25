@@ -1,6 +1,6 @@
 // store data in local storage
-// localStorage.setItem('name', 'steven');
-// localStorage.setItem('age', 50);
+localStorage.setItem('name', 'steven');
+localStorage.setItem('age', 50);
 
 // get data from local storage
 let name = localStorage.getItem('name');
@@ -14,3 +14,12 @@ localStorage.age = '40';
 name = localStorage.getItem('name');
 age = localStorage.getItem('age');
 console.log(name, age);
+
+// deleting data from local storage
+// localStorage.removeItem('name');
+localStorage.clear();
+
+name = localStorage.getItem('name');
+age = localStorage.getItem('age');
+
+console.log(name);
