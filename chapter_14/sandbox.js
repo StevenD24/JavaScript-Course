@@ -23,3 +23,18 @@ name = localStorage.getItem('name');
 age = localStorage.getItem('age');
 
 console.log(name);
+
+const todos = [
+    {text: "play mariokart", author: "steven"},
+    {text: "buy bread", author: "kevin"},
+    {text: "buy milk", author: "lin"}
+];
+
+// console.log(JSON.stringify(todos));
+// turn an JS object into a JSON string
+localStorage.setItem('todos', JSON.stringify(todos));
+
+const stored = localStorage.getItem('todos');
+
+// turn a JSON string back into an array
+console.log(JSON.parse(stored));
